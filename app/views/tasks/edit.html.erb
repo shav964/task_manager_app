@@ -1,0 +1,19 @@
+<h1>タスクを編集</h1>
+
+<%= form_with model: @task, local: true do |form| %>
+  <div>
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, "説明" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit "更新" %>
+  </div>
+<% end %>
+
+<%= link_to "キャンセル", task_path(@task) %>
